@@ -1,12 +1,15 @@
 # bingSearch
 
-A simple python script for linux to open your browser and conduct bing searches.
+A simple python script for linux to open your browser and conduct bing searches, with a main goal to prevent detection.
 
-##### Big shoutout to @[jack-mil](https://github.com/jack-mil), the script is inspired by his own implementation of the same, and I have used his keywords file for the same.
+Even though I have tried my best to make it hard to figure out that the searches are automated, there is still a chance to get caught.
 
 ```diff
 - Use at your own risk, automating bing searches goes against Microsoft's ToS
 ```
+
+##### Big shoutout to @[jack-mil](https://github.com/jack-mil), the script is inspired by his own implementation of the same, and I have used his keywords file for the same.
+
 
 ### Installation
 1. Run `pip -r requirements.txt`
