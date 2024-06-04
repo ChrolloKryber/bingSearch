@@ -53,7 +53,7 @@ for i in range(8):
         time.sleep(12)
 
     close_edge()
-    print(f"Kill Time : {datetime.datetime.now().time()}")
+    print(f"Kill Time : {datetime.datetime.now().time()}\n")
 
     time.sleep(900)
 

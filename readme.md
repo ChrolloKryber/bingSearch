@@ -2,7 +2,8 @@
 
 A simple python script for linux to open your browser and conduct bing searches, with a main goal to prevent detection.
 
-Even though I have tried my best to make it hard to figure out that the searches are automated, there is still a chance to get caught.
+Even though I have tried my best to make it hard to figure out that the searches are automated, there is still a chance to get caught.<br>
+It seems that bing can apply a cooldown of 12 points every 15 minutes, hence the script will wait for 15 minutes after executing 4 searches for 12 points, running this loop 8 times.
 
 ```diff
 - Use at your own risk, automating bing searches goes against Microsoft's ToS
@@ -19,6 +20,6 @@ Even though I have tried my best to make it hard to figure out that the searches
 ### About the script
 
 My goal was to create a script which could mimick the most human behavior. 
-The script utilizes Pynput library for emulating input via your keyboard, the script will automatically open a chromium window, conduct searches and close it. All with a set interval.
+The script utilizes Pynput library for emulating input via your keyboard, the script will automatically open a chromium window, conduct searches and close it. All with a set interval. Edit the browser in the code if you use something else.
 
 Since bing uses a bunch of URL parameters for every search, it's not possible to directly enter an appended URL with the search term attached to it. Hence, bing has to be set your default search engine.
