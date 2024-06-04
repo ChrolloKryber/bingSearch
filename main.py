@@ -33,13 +33,13 @@ def bing_search(word):
 
 def launch_edge():
     with open(os.devnull, "w") as devnull:
-        subprocess.Popen(["chromium"], stdout=devnull, stderr=devnull)
+        subprocess.Popen(["microsoft-edge-stable"], stdout=devnull, stderr=devnull)
 
 
 def close_edge():
-    os.system("pkill -f chromium")
+    os.system("pkill -f stable")
 
-for i in range(10):
+for i in range(8):
     print(f"Start Time : {datetime.datetime.now().time()}")
 
     launch_edge()
