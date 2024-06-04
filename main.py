@@ -5,7 +5,7 @@ from pynput.keyboard import Key, Controller
 import subprocess
 import random
 
-with open("private_keywords.txt", "r") as keywords:
+with open("keywords.txt", "r") as keywords:
     queries = keywords.readlines()
 
 keyboard = Controller()
@@ -37,7 +37,7 @@ def launch_edge():
 
 
 def close_edge():
-    os.system("pkill -f stable")
+    os.system("pkill -f msedge")
 
 for i in range(8):
     print(f"Start Time : {datetime.datetime.now().time()}")
