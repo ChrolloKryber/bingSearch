@@ -39,8 +39,6 @@ def launch_edge():
 def close_edge():
     os.system("pkill -f chromium")
 
-
-
 print(f"Start Time : {datetime.datetime.now().time()}")
 
 launch_edge()
