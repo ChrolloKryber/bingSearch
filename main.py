@@ -5,7 +5,7 @@ from pynput.keyboard import Key, Controller
 import subprocess
 import random
 
-with open("keywords.txt", "r") as keywords:
+with open("private_keywords.txt", "r") as keywords:
     queries = keywords.readlines()
 
 keyboard = Controller()
@@ -39,19 +39,21 @@ def launch_edge():
 def close_edge():
     os.system("pkill -f chromium")
 
+for i in range(10):
+    print(f"Start Time : {datetime.datetime.now().time()}")
 
+    launch_edge()
 
-print(f"Start Time : {datetime.datetime.now().time()}")
+    time.sleep(3)
+    
+    for i in range(4):
+        words = random.choice(queries)
+        print(f"Query {i + 1}: {words}", end="")
+        bing_search(words)
+        time.sleep(12)
 
-launch_edge()
+    close_edge()
+    print(f"Kill Time : {datetime.datetime.now().time()}")
 
-time.sleep(3)
+    time.sleep(900)
 
-for i in range(35):
-    words = random.choice(queries)
-    print(f"Query {i + 1}: {words}", end="")
-    bing_search(words)
-    time.sleep(12)
-
-close_edge()
-print(f"Kill Time : {datetime.datetime.now().time()}")
