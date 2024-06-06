@@ -39,21 +39,19 @@ def launch_edge():
 def close_edge():
     os.system("pkill -f msedge")
 
-for i in range(8):
-    print(f"Start Time : {datetime.datetime.now().time()}")
+print(f"Start Time : {datetime.datetime.now().time()}")
 
-    launch_edge()
+launch_edge()
 
-    time.sleep(3)
-    
-    for i in range(4):
-        words = random.choice(queries)
-        print(f"Query {i + 1}: {words}", end="")
-        bing_search(words)
-        time.sleep(12)
+time.sleep(3)
 
-    close_edge()
-    print(f"Kill Time : {datetime.datetime.now().time()}\n")
+for i in range(4):
+    words = random.choice(queries)
+    print(f"Query {i + 1}: {words}", end="")
+    bing_search(words)
+    time.sleep(12)
 
-    time.sleep(900)
+close_edge()
+print(f"Kill Time : {datetime.datetime.now().time()}\n")
 
+time.sleep(900)
