@@ -45,7 +45,7 @@ launch_edge()
 
 time.sleep(3)
 
-for i in range(4):
+for i in range(35):
     words = random.choice(queries)
     print(f"Query {i + 1}: {words}", end="")
     bing_search(words)
