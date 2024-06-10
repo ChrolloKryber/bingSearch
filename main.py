@@ -53,5 +53,3 @@ for i in range(35):
 
 close_edge()
 print(f"Kill Time : {datetime.datetime.now().time()}\n")
-
-time.sleep(900)
